@@ -238,25 +238,32 @@ public class TestLoja {
 	@Test
 	public void exercicio02_Customizado() {
 		// Defina seus próprios valores para as variáveis a seguir
-		String nomeLoja = "";
-		String logradouro = "";
-		int numero = 0;
+		String nomeLoja = "Tropical";
+		String logradouro = "Rua siqueira Campos";
+		int numero = 580;
 		String complemento = "";
-		String bairro = "";
-		String municipio = "";
-		String estado = "";
-		String cep = "";
-		String telefone = "";
+		String bairro = "Centro";
+		String municipio = "Paulista";
+		String estado = "Pernambuco";
+		String cep = "53401-320";
+		String telefone = "(81) 3438-5714";
 		String observacao = "";
-		String cnpj = "";
-		String inscricaoEstadual = "";
+		String cnpj = "37.886.772/0001-82";
+		String inscricaoEstadual = "4232303-79";
+
 
 		Loja lojaCustomizada = new Loja(nomeLoja,
 				new Endereco(logradouro, numero, complemento, bairro, municipio, estado, cep), telefone, observacao,
 				cnpj, inscricaoEstadual);
 
 		// E atualize o texto esperado abaixo
-		rodarTestarRetorno("" + BREAK, lojaCustomizada);
+		rodarTestarRetorno("Tropical" + BREAK + 
+		"Rua siqueira Campos, 580" + BREAK + 
+		"Centro - Paulista - Pernambuco" + BREAK + 
+		"CEP:53401-320 Tel (81) 3438-5714" + BREAK + 
+		"" + BREAK + 
+		"CNPJ: 37.886.772/0001-82" + BREAK + 
+		"IE: 4232303-79" + BREAK, lojaCustomizada);
 	}
 
 	private void rodarTestarRetorno(String expected, Loja loja) {
