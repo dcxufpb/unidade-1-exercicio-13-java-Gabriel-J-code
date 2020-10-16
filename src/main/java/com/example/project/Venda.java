@@ -35,7 +35,7 @@ public class Venda {
 
         String _datatime = dtf.format(this.DataHora.getTime());
 
-        String dados = String.format("%sV CCF:%06d COO:%06d",_datatime,this.getCcf(),this.getCoo());        
+        String dados = String.format("%sV CCF:%s COO:%s",_datatime,this.getCcf(),this.getCoo());        
         return dados;
     }
     
